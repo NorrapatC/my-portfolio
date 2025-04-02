@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <Layout.Header
-      className="p-4 shadow-lg fixed w-full top-0 left-0 z-10"
+      className="p-4 shadow-lg fixed w-full top-0 left-0 z-10 border-b-2 border-red"
       style={{ background: Theme.colors.background, position: "relative" }}
     >
       <div className="flex justify-between items-center">
