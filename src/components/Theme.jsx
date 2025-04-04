@@ -1,12 +1,11 @@
 const Theme = {
-    colors: {
-      background: "#1E1E2E", // พื้นหลัง Dark Gray-Blue
-      navbar: "#282C34", // Soft Dark Blue (Navbar)
-      textPrimary: "#E0E0E0", // ข้อความหลัก (Light Gray)
-      textSecondary: "#A8DADC", // ข้อความรอง (Muted Teal)
-      shadow: "rgba(0, 0, 0, 0.2)", // เงา
-    },
-  };
-  
-  export default Theme;
-  
+  colors: {
+    background: "#F5F1ED", // พื้นหลัง: เบจอ่อน คล้ายสีผนังธรรมชาติ
+    navbar: "#D8C4B6", // แถบด้านบน: น้ำตาลนู้ด/สีทราย
+    textPrimary: "#5E503F", // ข้อความหลัก: น้ำตาลเข้ม (อ่านง่ายและสบายตา)
+    textSecondary: "#A28C7E", // ข้อความรอง: น้ำตาลเทาอมชมพูหม่นๆ
+    shadow: "rgba(94, 80, 63, 0.2)", // เงาโทนน้ำตาลธรรมชาติ
+  },
+};
+
+export default Theme;

@@ -8,8 +8,13 @@ export default function Navbar() {
 
   return (
     <Layout.Header
-      className="p-4 shadow-lg fixed w-full top-0 left-0 z-10 border-b-2 border-red"
-      style={{ background: Theme.colors.background, position: "relative" }}
+      className="p-4 shadow-lg fixed w-full top-0 left-0 z-10"
+      style={{
+        background: Theme.colors.background,
+        position: "relative",
+        borderBottom: `2px solid ${Theme.colors.highlight}`,
+        boxShadow: `0 4px 6px ${Theme.colors.shadow}`,
+      }}
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
@@ -23,41 +28,26 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <a
-            href="#"
-            className="border-b-2 border-transparent hover:border-[#A8DADC] hover:text-[#A8DADC] transition-all duration-300 ease-in-out"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="relative border-b-2 border-transparent hover:border-[#A8DADC] hover:text-[#A8DADC] transition-all duration-300 ease-in-out"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="relative border-b-2 border-transparent hover:border-[#A8DADC] hover:text-[#A8DADC] transition-all duration-300 ease-in-out"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Skills
-          </a>
-          <a
-            href="#"
-            className="relative border-b-2 border-transparent hover:border-[#A8DADC] hover:text-[#A8DADC] transition-all duration-300 ease-in-out"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Project
-          </a>
-          <a
-            href="#"
-            className="relative border-b-2 border-transparent hover:border-[#A8DADC] hover:text-[#A8DADC] transition-all duration-300 ease-in-out"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Contact
-          </a>
+          {["Home", "About", "Skills", "Project", "Contact"].map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="border-b-2 border-transparent transition-all duration-300 ease-in-out"
+              style={{
+                color: Theme.colors.textSecondary,
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.color = Theme.colors.highlight;
+                e.target.style.borderBottomColor = Theme.colors.highlight;
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = Theme.colors.textSecondary;
+                e.target.style.borderBottomColor = "transparent";
+              }}
+            >
+              {item}
+            </a>
+          ))}
         </div>
 
         {/* Hamburger Button (Mobile) */}
@@ -84,43 +74,25 @@ export default function Navbar() {
             top: "100%",
             left: 0,
             right: 0,
+            boxShadow: `0 4px 6px ${Theme.colors.shadow}`,
           }}
         >
-          <a
-            href="#"
-            className="block py-2 w-full"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="block py-2 w-full"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="block py-2 w-full"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Skills
-          </a>
-          <a
-            href="#"
-            className="block py-2 w-full"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Project
-          </a>
-          <a
-            href="#"
-            className="block py-2 w-full"
-            style={{ color: Theme.colors.textSecondary }}
-          >
-            Contact
-          </a>
+          {["Home", "About", "Skills", "Project", "Contact"].map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="block py-2 w-full transition-all duration-300 ease-in-out"
+              style={{ color: Theme.colors.textSecondary }}
+              onMouseEnter={(e) => {
+                e.target.style.color = Theme.colors.highlight;
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = Theme.colors.textSecondary;
+              }}
+            >
+              {item}
+            </a>
+          ))}
         </div>
       )}
     </Layout.Header>

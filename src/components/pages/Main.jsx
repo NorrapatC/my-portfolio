@@ -26,7 +26,7 @@ function Main() {
             </h2>
             <h3
               className="mt-4 text-lg sm:text-xl"
-              style={{ color: Theme.colors.textSecondary }}
+              style={{ color: Theme.colors.highlight }}
             >
               <Typewriter
                 words={[
@@ -56,7 +56,11 @@ function Main() {
             <motion.img
               src="/images/profile2.png"
               alt="Profile"
-              className="rounded-md w-56 sm:w-64 h-auto object-cover border-2 border-gray-600 shadow-lg"
+              className="rounded-xl w-56 sm:w-64 h-auto object-cover border-2"
+              style={{
+                borderColor: Theme.colors.highlight,
+                boxShadow: `0 6px 12px ${Theme.colors.shadow}`,
+              }}
               whileHover={{ scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
