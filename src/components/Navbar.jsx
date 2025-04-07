@@ -11,7 +11,6 @@ export default function Navbar() {
       className="p-4 shadow-lg fixed w-full top-0 left-0 z-10"
       style={{
         background: Theme.colors.background,
-        position: "relative",
         borderBottom: `2px solid ${Theme.colors.highlight}`,
         boxShadow: `0 4px 6px ${Theme.colors.shadow}`,
       }}
@@ -19,7 +18,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <a
-          href="#"
+          href="#home"
           className="text-xl font-bold"
           style={{ color: Theme.colors.textPrimary }}
         >
@@ -28,11 +27,11 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          {["Home", "About", "Skills", "Project", "Contact"].map((item) => (
+          {["Home", "About", "Project", "Contact"].map((item) => (
             <a
               key={item}
-              href="#"
-              className="border-b-2 border-transparent transition-all duration-300 ease-in-out"
+              href={`#${item.toLowerCase()}`}
+              className="border-b-2 border-transparent hover:border-highlight transition-all duration-300"
               style={{
                 color: Theme.colors.textSecondary,
               }}
@@ -52,7 +51,7 @@ export default function Navbar() {
 
         {/* Hamburger Button (Mobile) */}
         <button
-          className="md:hidden"
+          className="md:hidden z-20" // เพิ่ม z-index เพื่อให้ปุ่มแสดงขึ้นมาเหนือเนื้อหาอื่น ๆ
           style={{ color: Theme.colors.textSecondary }}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -67,21 +66,18 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div
-          className="md:hidden p-4 shadow-lg w-full"
+          className="md:hidden p-4 shadow-lg w-full absolute top-full left-0 right-0 bg-opacity-90"
           style={{
             background: Theme.colors.navbar,
-            position: "absolute",
-            top: "100%",
-            left: 0,
-            right: 0,
             boxShadow: `0 4px 6px ${Theme.colors.shadow}`,
+            zIndex: 10, // เพิ่ม z-index ให้เมนูแน่ใจว่าไม่ซ่อนจากปุ่ม
           }}
         >
-          {["Home", "About", "Skills", "Project", "Contact"].map((item) => (
+          {["Home", "About", "Project", "Contact"].map((item) => (
             <a
               key={item}
-              href="#"
-              className="block py-2 w-full transition-all duration-300 ease-in-out"
+              href={`#${item.toLowerCase()}`}
+              className="block border-b-2 border-transparent hover:border-highlight transition-all duration-300"
               style={{ color: Theme.colors.textSecondary }}
               onMouseEnter={(e) => {
                 e.target.style.color = Theme.colors.highlight;
