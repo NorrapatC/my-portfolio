@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import Theme from "../Theme";
 
@@ -11,7 +12,7 @@ function About() {
     <Layout
       id="about"
       style={{ background: Theme.colors.background }}
-      className="h-screen flex items-center justify-center sm:min-h-screen sm:py-20 sm:px-12 lg:py-24 lg:px-24 md:py-32 md:px-24"
+      className="h-screen flex items-center justify-center py-10 md:py-32 md:px-24 lg:py-24 lg:px-24"
     >
       <Content className="container mx-auto px-6 py-6 lg:px-20 border-2 border-transparent rounded-lg shadow-xl bg-neutral-50">
         {/* Header */}
@@ -25,30 +26,33 @@ function About() {
         <div className="grid grid-cols-1 p-10 md:grid-cols-2 gap-14 items-center text-center md:text-left">
           {/* Left Side: Profile Image */}
           <div className="flex justify-center">
-            <motion.img
-              src="/images/profile2.png"
-              alt="Profile"
-              className="rounded-full w-52 sm:w-52 sm:h-52 md:w-64 md:h-72 lg:w-80 h-auto object-cover border-1 border-earthGreen"
-              style={{
-                boxShadow: `0 6px 15px ${Theme.colors.shadow}`,
-                background: Theme.colors.background,
-              }}
+            <motion.div
               whileHover={{ scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
-            />
+              className="rounded-full w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 overflow-hidden border-1 border-earthGreen shadow-md"
+              style={{ background: Theme.colors.background }}
+            >
+              <Image
+                src="/images/profile2.png"
+                alt="Profile"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </motion.div>
           </div>
 
           {/* Right Side: Text Content */}
-          <div className="text-start sm:mt-1">
+          <div className="text-start mt-4 ">
             <p
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4"
+              className="text-lg md:text-xl lg:text-2xl font-semibold mb-4"
               style={{ color: Theme.colors.textSecondary }}
             >
               As a recent graduate in
             </p>
             <p
-              className="mt-4 text-lg sm:text-xl md:text-2xl lg:text-2xl"
+              className="mt-4 text-lg md:text-xl lg:text-xl"
               style={{ color: Theme.colors.textSecondary }}
             >
               <span className="font-semibold">
@@ -57,7 +61,7 @@ function About() {
               from Kasetsart University (KU), I am passionate for development
             </p>
             <p
-              className="mt-3 text-sm sm:text-base md:text-xl lg:text-xl"
+              className="mt-3 text-base md:text-xl lg:text-xl"
               style={{ color: Theme.colors.textSecondary }}
             >
               I'm a full-stack developer who loves working on both frontend and
