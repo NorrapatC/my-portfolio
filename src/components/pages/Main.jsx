@@ -69,7 +69,7 @@ function Main() {
             <motion.img
               src="/images/profile2.png"
               alt="Profile"
-              className="rounded-sm w-52 sm:w-64 md:w-80 h-90 object-cover border-1"
+              className="rounded-sm w-52 sm:w-64 md:w-80 lg:w-90 h-auto object-cover border-1"
               style={{
                 boxShadow: `0 6px 12px ${Theme.colors.shadow}`,
               }}

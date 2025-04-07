@@ -1,6 +1,6 @@
 "use client";
 
-import { Layout } from "antd";
+import { Layout, FloatButton } from "antd";
 
 import Navbar from "@/components/Navbar";
 import Main from "@/components/pages/Main";
@@ -12,6 +12,12 @@ export default function Home() {
       <Navbar />
       <Main />
       <About />
+
+      {/* Float Button for Back to Top */}
+      <FloatButton.BackTop
+        visibilityHeight={300}
+        tooltip="Back to Top"
+      />
     </Layout>
   );
 }

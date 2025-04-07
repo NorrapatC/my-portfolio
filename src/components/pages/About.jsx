@@ -28,7 +28,7 @@ function About() {
             <motion.img
               src="/images/profile2.png"
               alt="Profile"
-              className="rounded-full w-52 sm:w-52 sm:h-52 md:w-64 md:h-72 lg:w-80 lg:h-84 h-80 object-cover border-1 border-earthGreen"
+              className="rounded-full w-52 sm:w-52 sm:h-52 md:w-64 md:h-72 lg:w-80 h-auto object-cover border-1 border-earthGreen"
               style={{
                 boxShadow: `0 6px 15px ${Theme.colors.shadow}`,
                 background: Theme.colors.background,
