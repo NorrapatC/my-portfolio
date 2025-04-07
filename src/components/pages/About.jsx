@@ -12,9 +12,9 @@ function About() {
     <Layout
       id="about"
       style={{ background: Theme.colors.background }}
-      className="h-screen flex items-center justify-center py-10 md:py-32 md:px-24 lg:py-24 lg:px-24"
+      className="h-screen flex items-center justify-center py-11 md:py-32 md:px-24 lg:py-24 lg:px-24"
     >
-      <Content className="container mx-auto px-6 py-6 lg:px-20 border-2 border-transparent rounded-lg shadow-xl bg-neutral-50">
+      <Content className="container mx-auto px-1 py-4 lg:px-20 border-2 border-transparent rounded-lg shadow-xl bg-neutral-50">
         {/* Header */}
         <h3
           className="text-4xl sm:text-3xl font-bold text-start mt-4 mb-6 border-b-2 border-earthGreen"
@@ -30,8 +30,11 @@ function About() {
               whileHover={{ scale: 1.1, rotate: 3 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
-              className="rounded-full w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 overflow-hidden border-1 border-earthGreen shadow-md"
-              style={{ background: Theme.colors.background }}
+              className="relative rounded-full w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 overflow-hidden border-1 border-earthGreen shadow-md"
+              style={{
+                boxShadow: `0 6px 12px ${Theme.colors.shadow}`,
+                background: Theme.colors.background,
+              }}
             >
               <Image
                 src="/images/profile2.png"
@@ -44,9 +47,9 @@ function About() {
           </div>
 
           {/* Right Side: Text Content */}
-          <div className="text-start mt-4 ">
+          <div className="text-start">
             <p
-              className="text-lg md:text-xl lg:text-2xl font-semibold mb-4"
+              className="text-lg md:text-xl lg:text-2xl font-semibold mb-1"
               style={{ color: Theme.colors.textSecondary }}
             >
               As a recent graduate in

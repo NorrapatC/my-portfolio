@@ -25,7 +25,7 @@ function Main() {
                 whileHover={{ scale: 1.1, rotate: 3, y: -10 }} // เหมือนของเดิม
                 whileTap={{ scale: 0.9, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                className="relative rounded-sm w-52 h-80 md:w-52 md:h-52 lg:w-[27rem] lg:h-[27rem] overflow-hidden border-1 border-earthGreen"
+                className="relative rounded-sm w-60 h-80 md:w-72 md:h-72 lg:w-90 lg:h-90 overflow-hidden border-1 border-earthGreen shadow-md"
                 style={{
                   boxShadow: `0 6px 12px ${Theme.colors.shadow}`,
                   background: Theme.colors.background,
