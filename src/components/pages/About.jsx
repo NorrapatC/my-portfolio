@@ -40,8 +40,9 @@ function About() {
               <Image
                 src="/images/profile2.png"
                 alt="Profile"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 13rem, (max-width: 1024px) 16rem, 20rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </motion.div>

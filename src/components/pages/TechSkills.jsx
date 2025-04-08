@@ -32,8 +32,9 @@ function TechSkills() {
               <Image
                 src="/images/html5.png"
                 alt="html5"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -52,8 +53,9 @@ function TechSkills() {
               <Image
                 src="/images/css-3.png"
                 alt="css3"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -72,8 +74,9 @@ function TechSkills() {
               <Image
                 src="/images/js.png"
                 alt="javascript"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -92,8 +95,9 @@ function TechSkills() {
               <Image
                 src="/images/react.png"
                 alt="react"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -101,6 +105,7 @@ function TechSkills() {
               React
             </p>
           </motion.div>
+
           {/* TailwindCss Icon */}
           <motion.div
             whileHover={{ scale: 1.1, rotate: 3 }}
@@ -112,8 +117,9 @@ function TechSkills() {
               <Image
                 src="/images/tailwindcss.png"
                 alt="tailwindcss"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -132,8 +138,9 @@ function TechSkills() {
               <Image
                 src="/images/bootstrap.png"
                 alt="bootstrap"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -152,8 +159,9 @@ function TechSkills() {
               <Image
                 src="/images/node-js.png"
                 alt="nodejs"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -172,8 +180,9 @@ function TechSkills() {
               <Image
                 src="/images/nextjs.png"
                 alt="nextjs"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -192,8 +201,9 @@ function TechSkills() {
               <Image
                 src="/images/github.png"
                 alt="github"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -212,8 +222,9 @@ function TechSkills() {
               <Image
                 src="/images/sql-server.png"
                 alt="sql"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -232,8 +243,9 @@ function TechSkills() {
               <Image
                 src="/images/python.png"
                 alt="python"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -252,8 +264,9 @@ function TechSkills() {
               <Image
                 src="/images/vercel.png"
                 alt="vercel"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -272,8 +285,9 @@ function TechSkills() {
               <Image
                 src="/images/mongodb.png"
                 alt="mongodb"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -292,8 +306,9 @@ function TechSkills() {
               <Image
                 src="/images/blender.png"
                 alt="blender"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
