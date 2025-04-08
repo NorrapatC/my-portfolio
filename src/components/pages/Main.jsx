@@ -22,7 +22,7 @@ function Main() {
             {/* Right Side: Profile Image */}
             <div className="flex justify-center sm:order-1 md:order-1 lg:order-2">
               <motion.div
-                whileHover={{ scale: 1.1, rotate: 3, y: -10 }} // เหมือนของเดิม
+                whileHover={{ scale: 1.1, rotate: 3, y: -10 }}
                 whileTap={{ scale: 0.9, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
                 className="relative rounded-sm w-60 h-80 md:w-72 md:h-72 lg:w-90 lg:h-90 overflow-hidden border-1 border-earthGreen shadow-md"

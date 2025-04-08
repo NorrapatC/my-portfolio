@@ -22,8 +22,9 @@ function About() {
         >
           About Me
         </h3>
+
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 p-10 md:grid-cols-2 gap-14 items-center text-center md:text-left">
+        <div className="grid grid-cols-1 p-8 md:grid-cols-2 gap-14 items-center text-center md:text-left">
           {/* Left Side: Profile Image */}
           <div className="flex justify-center">
             <motion.div

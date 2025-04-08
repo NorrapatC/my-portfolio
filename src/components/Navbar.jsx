@@ -51,7 +51,7 @@ export default function Navbar() {
 
         {/* Hamburger Button (Mobile) */}
         <button
-          className="md:hidden z-20" // เพิ่ม z-index เพื่อให้ปุ่มแสดงขึ้นมาเหนือเนื้อหาอื่น ๆ
+          className="md:hidden z-20"
           style={{ color: Theme.colors.textSecondary }}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -70,7 +70,7 @@ export default function Navbar() {
           style={{
             background: Theme.colors.navbar,
             boxShadow: `0 4px 6px ${Theme.colors.shadow}`,
-            zIndex: 10, // เพิ่ม z-index ให้เมนูแน่ใจว่าไม่ซ่อนจากปุ่ม
+            zIndex: 10,
           }}
         >
           {["Home", "About", "Project", "Contact"].map((item) => (
@@ -78,6 +78,7 @@ export default function Navbar() {
               key={item}
               href={`#${item.toLowerCase()}`}
               className="block border-b-2 border-transparent hover:border-highlight transition-all duration-300"
+              onClick={() => setIsOpen(false)}
               style={{ color: Theme.colors.textSecondary }}
               onMouseEnter={(e) => {
                 e.target.style.color = Theme.colors.highlight;

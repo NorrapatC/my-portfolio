@@ -1,9 +1,310 @@
-import React from 'react'
+import React from "react";
+import { Layout } from "antd";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+import Theme from "../Theme";
+const { Content } = Layout;
 
 function TechSkills() {
   return (
-    <div>TechSkills</div>
-  )
+    <Layout
+      style={{ background: Theme.colors.background }}
+      className="h-screen flex items-center justify-center py-11 md:py-32 md:px-24 lg:py-24 lg:px-24"
+    >
+      <Content className="container mx-auto px-1 py-4 lg:px-20 border-2 border-transparent rounded-lg shadow-xl">
+        <h3
+          className="text-4xl sm:text-3xl font-bold text-start mt-4 mb-4 border-b-2 border-earthGreen"
+          style={{ color: Theme.colors.textPrimary }}
+        >
+          Skills
+        </h3>
+
+        <div className="grid grid-cols-2 p-8 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center text-center md:text-left">
+          {/* HTML5 Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/html5.png"
+                alt="html5"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              HTML5
+            </p>
+          </motion.div>
+          {/* CSS3 Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/css-3.png"
+                alt="css3"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              CSS3
+            </p>
+          </motion.div>
+          {/* JavaScript Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/js.png"
+                alt="javascript"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              JavaScript
+            </p>
+          </motion.div>
+          {/* ReactJs Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/react.png"
+                alt="react"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              React
+            </p>
+          </motion.div>
+          {/* TailwindCss Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/tailwindcss.png"
+                alt="tailwindcss"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              Tailwind CSS
+            </p>
+          </motion.div>
+          {/* Bootstrap Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/bootstrap.png"
+                alt="bootstrap"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              Bootstrap
+            </p>
+          </motion.div>
+          {/* NodeJs Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/node-js.png"
+                alt="nodejs"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              Node JS
+            </p>
+          </motion.div>
+          {/* NextJs Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/nextjs.png"
+                alt="nextjs"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              Next JS
+            </p>
+          </motion.div>
+          {/* Github Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/github.png"
+                alt="github"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              GitHub
+            </p>
+          </motion.div>
+          {/* Sql Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/sql-server.png"
+                alt="sql"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              SQL
+            </p>
+          </motion.div>
+          {/* Python Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/python.png"
+                alt="python"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              Python
+            </p>
+          </motion.div>
+          {/* Vercel Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/vercel.png"
+                alt="vercel"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              Vercel
+            </p>
+          </motion.div>
+          {/* MongoDB Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/mongodb.png"
+                alt="mongodb"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              MongoDB
+            </p>
+          </motion.div>
+          {/* Blender Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18 ">
+              <Image
+                src="/images/blender.png"
+                alt="blender"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              Blender
+            </p>
+          </motion.div>
+        </div>
+      </Content>
+    </Layout>
+  );
 }
 
-export default TechSkills
+export default TechSkills;
