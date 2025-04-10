@@ -10,7 +10,7 @@ function TechSkills() {
   return (
     <Layout
       style={{ background: Theme.colors.background }}
-      className="h-screen flex items-center justify-center py-11 md:py-32 md:px-24 lg:py-24 lg:px-24"
+      className="h-screen flex items-center justify-center py-10 md:py-32 md:px-24 lg:py-24 lg:px-24"
     >
       <Content className="container mx-auto px-1 py-4 lg:px-20 border-2 border-transparent rounded-lg shadow-xl">
         <h3
@@ -20,7 +20,7 @@ function TechSkills() {
           Skills
         </h3>
 
-        <div className="grid grid-cols-2 p-8 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center text-center md:text-left">
+        <div className="grid grid-cols-2 p-4 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center text-center md:text-left">
           {/* HTML5 Icon */}
           <motion.div
             whileHover={{ scale: 1.1, rotate: 3 }}
