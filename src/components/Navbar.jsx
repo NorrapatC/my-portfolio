@@ -1,7 +1,18 @@
+"use client";
+
 import { useState } from "react";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import Theme from "./Theme";
 import { Layout } from "antd";
+
+const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Certificates", href: "#certificates" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,10 +38,10 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          {["Home", "About", "Project", "Contact"].map((item) => (
+          {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="border-b-2 border-transparent hover:border-highlight transition-all duration-300"
               style={{
                 color: Theme.colors.textSecondary,
@@ -44,7 +55,7 @@ export default function Navbar() {
                 e.target.style.borderBottomColor = "transparent";
               }}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
@@ -66,17 +77,17 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div
-          className="md:hidden p-4 shadow-lg w-full absolute top-full left-0 right-0 bg-opacity-90"
+          className="md:hidden p-4 shadow-lg w-full absolute top-full left-0 right-0"
           style={{
             background: Theme.colors.navbar,
             boxShadow: `0 4px 6px ${Theme.colors.shadow}`,
             zIndex: 10,
           }}
         >
-          {["Home", "About", "Project", "Contact"].map((item) => (
+          {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="block border-b-2 border-transparent hover:border-highlight transition-all duration-300"
               onClick={() => setIsOpen(false)}
               style={{ color: Theme.colors.textSecondary }}
@@ -87,7 +98,7 @@ export default function Navbar() {
                 e.target.style.color = Theme.colors.textSecondary;
               }}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>

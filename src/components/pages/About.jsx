@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Layout } from "antd";
 import { motion } from "framer-motion";
@@ -12,9 +14,9 @@ function About() {
     <Layout
       id="about"
       style={{ background: Theme.colors.background }}
-      className="h-screen flex items-center justify-center py-11 md:py-32 md:px-24 lg:py-24 lg:px-24"
+      className="h-screen flex items-center justify-center pt-14 md:py-32 md:px-24 lg:py-24 lg:px-24"
     >
-      <Content className="container mx-auto px-1 py-4 lg:px-20 border-2 border-transparent rounded-lg shadow-xl bg-neutral-50">
+      <Content className="container mx-auto px-1 lg:px-20 border-2 border-transparent rounded-lg shadow-xl bg-neutral-50">
         {/* Header */}
         <h3
           className="text-4xl sm:text-3xl font-bold text-start mt-4 mb-6 border-b-2 border-earthGreen"
@@ -24,7 +26,7 @@ function About() {
         </h3>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 p-8 md:grid-cols-2 gap-14 items-center text-center md:text-left">
+        <div className="grid grid-cols-1 p-8 md:grid-cols-2 gap-12 items-center text-center md:text-left">
           {/* Left Side: Profile Image */}
           <div className="flex justify-center">
             <motion.div
@@ -49,7 +51,7 @@ function About() {
           </div>
 
           {/* Right Side: Text Content */}
-          <div className="text-start">
+          <div className="text-start ">
             <p
               className="text-lg md:text-xl lg:text-2xl font-semibold mb-1"
               style={{ color: Theme.colors.textSecondary }}
@@ -57,7 +59,7 @@ function About() {
               As a recent graduate in
             </p>
             <p
-              className="mt-4 text-lg md:text-xl lg:text-xl"
+              className="mt-3 text-lg md:text-xl lg:text-xl"
               style={{ color: Theme.colors.textSecondary }}
             >
               <span className="font-semibold">
@@ -66,7 +68,7 @@ function About() {
               from Kasetsart University (KU), I am passionate for development
             </p>
             <p
-              className="mt-3 text-base md:text-xl lg:text-xl"
+              className="mt-2 text-base md:text-xl lg:text-xl"
               style={{ color: Theme.colors.textSecondary }}
             >
               I'm a full-stack developer who loves working on both frontend and

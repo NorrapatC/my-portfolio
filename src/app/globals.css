@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --color-earthGreen: #6D7B3D;
+  --color-earthOrange: #F2A27A;
+  --color-highlight: #D1B48C;
+}
+
 html {
   scroll-behavior: smooth;
 }

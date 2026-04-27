@@ -6,6 +6,9 @@ import Navbar from "@/components/Navbar";
 import Main from "@/components/pages/Main";
 import About from "@/components/pages/About";
 import TechSkills from "@/components/pages/TechSkills";
+import Certificates from "@/components/pages/Certificates";
+import Project from "@/components/pages/Project";
+import Contact from "@/components/pages/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
       <Main />
       <About />
       <TechSkills />
+      <Certificates />
+      <Project />
+      <Contact />
 
       {/* Float Button for Back to Top */}
       <FloatButton.BackTop

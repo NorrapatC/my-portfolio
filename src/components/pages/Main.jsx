@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { Layout } from "antd";
+import { DownloadOutlined, GithubOutlined } from "@ant-design/icons";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -87,6 +90,41 @@ function Main() {
               >
                 Welcome to My Portfolio
               </p>
+              <div className="mt-6 flex gap-3 flex-wrap">
+                <motion.a
+                  href="/resume.pdf"
+                  download
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md font-semibold text-sm"
+                  style={{
+                    background: Theme.colors.button,
+                    color: "#fff",
+                    textDecoration: "none",
+                  }}
+                >
+                  <DownloadOutlined />
+                  Resume
+                </motion.a>
+
+                <motion.a
+                  href="https://github.com/safe-norrapat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md font-semibold text-sm"
+                  style={{
+                    background: "transparent",
+                    border: `1.5px solid ${Theme.colors.earthGreen}`,
+                    color: Theme.colors.earthGreen,
+                    textDecoration: "none",
+                  }}
+                >
+                  <GithubOutlined />
+                  GitHub
+                </motion.a>
+              </div>
             </div>
           </div>
         </div>

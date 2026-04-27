@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Layout } from "antd";
 import Image from "next/image";
@@ -9,8 +11,9 @@ const { Content } = Layout;
 function TechSkills() {
   return (
     <Layout
+      id="skills"
       style={{ background: Theme.colors.background }}
-      className="h-screen flex items-center justify-center py-10 md:py-32 md:px-24 lg:py-24 lg:px-24"
+      className="h-screen flex items-center justify-center pt-10 md:py-32 md:px-24 lg:py-24 lg:px-24"
     >
       <Content className="container mx-auto px-1 py-4 lg:px-20 border-2 border-transparent rounded-lg shadow-xl">
         <h3
@@ -82,6 +85,27 @@ function TechSkills() {
             </div>
             <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
               JavaScript
+            </p>
+          </motion.div>
+          {/* TypeScript Icon */}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 10 }}
+            className="flex flex-col items-center space-y-2"
+          >
+            <div className="relative w-9 h-9 md:w-12 md:h-12 lg:w-18 lg:h-18">
+              <Image
+                src="/images/typescript.svg"
+                alt="typescript"
+                fill
+                sizes="(max-width: 768px) 2.25rem, (max-width: 1024px) 3rem, 4.5rem"
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
+            <p className="text-center text-xs md:text-lg font-semibold text-gray-700">
+              TypeScript
             </p>
           </motion.div>
           {/* ReactJs Icon */}
